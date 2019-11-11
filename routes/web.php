@@ -12,3 +12,6 @@
 */
 
 Route::get('user/{user}', 'userController@index');
+Route::get('task/create', 'taskController@create');
+
+Route::post('/task','taskController@store');

@@ -16,11 +16,11 @@ class CreateTasksTable extends Migration
         Schema::create('tasks', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->text('body');
-            $table->boolean('completed');
-            $table->bigInteger('user_id')->unsigned();
+            $table->boolean('completed')->default(0);
+            // $table->bigInteger('user_id')->unsigned()->default(1);
             $table->timestamps();
 
-            $table->foreign('user_id')->references('id')->on('users');
+            // $table->foreign('user_id')->references('id')->on('users');
         });
     }
 

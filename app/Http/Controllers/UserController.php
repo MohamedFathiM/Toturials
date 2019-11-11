@@ -13,4 +13,6 @@ class UserController extends Controller
         $tasks = $user->tasks()->iscomplete(1)->get();
         return view('welcome',compact('tasks'));
     }
+
+    
 }
